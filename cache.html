@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clear FiveM Cache</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="cache">
+  <nav class="nav" id="site-nav"></nav>
+  <header class="hero compact">
+    <img class="bg" src="images/hero-glow-city.png" alt="" />
+    <div class="hero-inner">
+      <h1>Clear your FiveM cache</h1>
+      <p class="lede">Do this after installing shaders, if textures look old, or if a server will not finish loading.</p>
+    </div>
+  </header>
+  <main>
+    <section class="tips">
+      <article class="card">
+        <h3>Delete these</h3>
+        <ul>
+          <li><code>cache</code></li>
+          <li><code>server-cache</code></li>
+          <li><code>server-cache-priv</code></li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Leave these alone</h3>
+        <ul>
+          <li><code>game-storage</code> — settings and local data</li>
+          <li>Your GTA V game folder</li>
+          <li>The Glow <code>mods</code> and <code>plugins</code> you just installed</li>
+        </ul>
+      </article>
+    </section>
+
+    <article class="step">
+      <img src="images/step-cache-run.png" alt="Windows Run box opening the FiveM data folder" />
+      <div class="copy">
+        <span class="badge">STEP 1</span>
+        <h3>Close FiveM, then open the data folder</h3>
+        <ol>
+          <li>Fully close FiveM. Check Task Manager if it is still running.</li>
+          <li>Press <strong>Windows + R</strong>.</li>
+          <li>Paste the path below and press Enter.</li>
+        </ol>
+        <div class="path-row">
+          <code id="cache-path">%localappdata%\FiveM\FiveM.app\data</code>
+          <button class="copy-btn" type="button" data-copy="cache-path">Copy path</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="step reverse">
+      <div class="copy">
+        <span class="badge">STEP 2</span>
+        <h3>Delete the three cache folders</h3>
+        <ol>
+          <li>Inside <code>data</code>, select <code>cache</code>, <code>server-cache</code>, and <code>server-cache-priv</code>.</li>
+          <li>Delete them. FiveM will rebuild them the next time you join.</li>
+          <li>Do not delete <code>game-storage</code>.</li>
+        </ol>
+        <p class="warn">The first join after this is slower. That is normal. The server is sending files again.</p>
+      </div>
+      <img src="images/step-cache-folders.png" alt="FiveM data folder with cache folders selected" />
+    </article>
+
+    <article class="step">
+      <img src="images/step-fivem-app.png" alt="FiveM.app folder" />
+      <div class="copy">
+        <span class="badge">STEP 3</span>
+        <h3>Start FiveM again</h3>
+        <ol>
+          <li>Launch FiveM.</li>
+          <li>Join GLOW UP RP once and let it finish downloading.</li>
+          <li>If ReShade does not appear, press <strong>Home</strong> and load the Glow preset.</li>
+        </ol>
+        <p class="ok">Clearing cache does not remove the shader pack. Your <code>mods</code> and <code>plugins</code> stay where you put them.</p>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/config.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

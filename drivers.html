@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Update Graphics Drivers</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="drivers">
+  <nav class="nav" id="site-nav"></nav>
+  <header class="hero compact">
+    <img class="bg" src="images/hero-glow-city.png" alt="" />
+    <div class="hero-inner">
+      <h1>Update your graphics drivers</h1>
+      <p class="lede">Old drivers are a top reason ReShade, ENB, and FiveM crash or look broken. Use the official app for your GPU.</p>
+    </div>
+  </header>
+  <main>
+    <article class="step">
+      <img src="images/step-dxdiag.png" alt="dxdiag Display tab showing the GPU name" />
+      <div class="copy">
+        <span class="badge">STEP 1</span>
+        <h3>Find your GPU</h3>
+        <ol>
+          <li>Press <strong>Windows + R</strong>.</li>
+          <li>Type <code>dxdiag</code> and press Enter.</li>
+          <li>Open the <strong>Display</strong> tab.</li>
+          <li>Read the <strong>Name</strong> line. That tells you NVIDIA, AMD, or Intel.</li>
+        </ol>
+        <div class="path-row">
+          <code id="dxdiag-path">dxdiag</code>
+          <button class="copy-btn" type="button" data-copy="dxdiag-path">Copy</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="step reverse">
+      <div class="copy">
+        <span class="badge">STEP 2</span>
+        <h3>Download from the official site</h3>
+        <p>Pick your brand. Do not use random “driver booster” websites.</p>
+        <div class="actions" style="justify-content:flex-start;margin:16px 0;">
+          <a class="btn btn-primary" href="https://www.nvidia.com/en-us/software/nvidia-app/" target="_blank" rel="noreferrer">NVIDIA App</a>
+          <a class="btn" href="https://www.amd.com/en/support/download/drivers.html" target="_blank" rel="noreferrer">AMD Adrenalin</a>
+          <a class="btn" href="https://www.intel.com/content/www/us/en/download-center/home.html" target="_blank" rel="noreferrer">Intel drivers</a>
+        </div>
+        <ul>
+          <li><strong>NVIDIA:</strong> install NVIDIA App, open Drivers, download Game Ready.</li>
+          <li><strong>AMD:</strong> install Adrenalin, check for driver updates.</li>
+          <li><strong>Intel:</strong> use Intel Driver & Support Assistant or the Arc/Iris page.</li>
+        </ul>
+      </div>
+      <img src="images/step-nvidia-drivers.png" alt="NVIDIA App Drivers page with Game Ready download" />
+    </article>
+
+    <article class="step">
+      <img src="images/step-win-run.png" alt="Windows Run dialog" />
+      <div class="copy">
+        <span class="badge">STEP 3</span>
+        <h3>Install, reboot, then test FiveM</h3>
+        <ol>
+          <li>Close FiveM, Discord overlays, and your browser if the installer asks.</li>
+          <li>Install the driver. If you see a Custom / Clean install option, use it.</li>
+          <li>Restart the PC.</li>
+          <li>Open FiveM and join once. If things look off, <a href="cache.html">clear your cache</a>.</li>
+        </ol>
+        <p class="warn">Windows Update can install older GPU drivers later. If FiveM breaks after a Windows update, install the official Game Ready / Adrenalin driver again.</p>
+      </div>
+    </article>
+
+    <section class="tips">
+      <article class="card">
+        <h3>Laptop users</h3>
+        <ul>
+          <li>Many laptops have two GPUs. FiveM should use the high-performance one.</li>
+          <li>Windows Settings → System → Display → Graphics → add FiveM.exe → change to High performance.</li>
+          <li>Plug in the charger. Many laptops cut GPU power on battery.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>If the install fails</h3>
+        <ul>
+          <li>Run the official installer as administrator.</li>
+          <li>Turn off overlay apps first: Discord, NVIDIA, Xbox Game Bar.</li>
+          <li>Do not use third-party driver packs or cracked “tweaked” drivers.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/config.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

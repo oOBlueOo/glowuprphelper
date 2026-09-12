@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Install Glow Shaders</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="install">
+  <nav class="nav" id="site-nav"></nav>
+  <header class="hero compact">
+    <img class="bg" src="images/hero-glow-city.png" alt="" />
+    <div class="hero-inner">
+      <h1>How to install</h1>
+      <p class="lede">This pack has two destinations. Plugins and mods go into FiveM AppData. ENB files go into your GTA V game folder.</p>
+      <div class="pills">
+        <a class="pill" href="download.html">Get the pack</a>
+        <a class="pill" href="#pack">The 3 folders</a>
+        <a class="pill" href="#fivem">FiveM install</a>
+        <a class="pill" href="#gtav">GTA V ENB</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="pack">
+      <h2>What is inside the pack</h2>
+      <p>Extract <strong>Glow_shaders.rar</strong> to your Desktop. You should see these three folders. Each one goes to a different place.</p>
+      <div class="split">
+        <article class="card">
+          <h3>plugins</h3>
+          <p>ReShade, QuantV, and shader files. Drop these into FiveM.</p>
+        </article>
+        <article class="card">
+          <h3>mods</h3>
+          <p>The .rpf visual files. Drop these into FiveM.</p>
+        </article>
+        <article class="card">
+          <h3>GTA 5</h3>
+          <p>ENB files. Drop these into your real GTA V folder. Not FiveM.</p>
+        </article>
+      </div>
+    </section>
+
+    <article class="step" id="extract">
+      <img src="images/step-pack-folders.png" alt="Glow_shaders folder with GTA 5, mods, and plugins" />
+      <div class="copy">
+        <span class="badge">STEP 1</span>
+        <h3>Extract the pack</h3>
+        <ol>
+          <li>Close FiveM and GTA V first.</li>
+          <li>Right-click <code>Glow_shaders.rar</code> and extract it.</li>
+          <li>Open the extracted folder. You should see <code>GTA 5</code>, <code>mods</code>, and <code>plugins</code>.</li>
+        </ol>
+      </div>
+    </article>
+
+    <article class="step reverse" id="fivem">
+      <div class="copy">
+        <span class="badge">STEP 2</span>
+        <h3>Open FiveM AppData</h3>
+        <ol>
+          <li>Press <strong>Windows + R</strong>.</li>
+          <li>Paste the path below and press Enter.</li>
+          <li>This opens <code>FiveM.app</code>. That is the folder you want.</li>
+        </ol>
+        <div class="path-row">
+          <code id="fivem-path">%localappdata%\FiveM\FiveM.app</code>
+          <button class="copy-btn" type="button" data-copy="fivem-path">Copy path</button>
+        </div>
+      </div>
+      <img src="images/step-win-run.png" alt="Windows Run box opening FiveM AppData" />
+    </article>
+
+    <article class="step">
+      <img src="images/step-fivem-app.png" alt="FiveM.app folder with mods and plugins highlighted" />
+      <div class="copy">
+        <span class="badge">STEP 3</span>
+        <h3>Find mods and plugins</h3>
+        <p>Inside <code>FiveM.app</code> you will already see two folders:</p>
+        <ul>
+          <li><code>mods</code></li>
+          <li><code>plugins</code></li>
+        </ul>
+        <p>Those are the only two FiveM folders you need. Do not drop the ENB files here.</p>
+      </div>
+    </article>
+
+    <article class="step reverse">
+      <div class="copy">
+        <span class="badge">STEP 4</span>
+        <h3>Drop the mods in</h3>
+        <ol>
+          <li>Open the pack folder named <code>mods</code>.</li>
+          <li>Select the .rpf files:
+            <br><code>nopixel.rpf</code>
+            <br><code>nopixel-desert-grass.rpf</code>
+            <br><code>nopixel-light-addons.rpf</code>
+          </li>
+          <li>Drag them into <code>FiveM.app\mods</code>.</li>
+          <li>If Windows asks to replace files, click Replace.</li>
+        </ol>
+      </div>
+      <img src="images/step-drop-mods.png" alt="Dragging rpf mods into the FiveM mods folder" />
+    </article>
+
+    <article class="step">
+      <img src="images/step-drop-plugins.png" alt="Dragging plugin files into the FiveM plugins folder" />
+      <div class="copy">
+        <span class="badge">STEP 5</span>
+        <h3>Drop the plugins in</h3>
+        <ol>
+          <li>Open the pack folder named <code>plugins</code>.</li>
+          <li>Select everything inside it, including <code>reshade-shaders</code>, <code>QuantV.asi</code>, <code>d3d11.dll</code>, and the ReShade ini files.</li>
+          <li>Drag all of that into <code>FiveM.app\plugins</code>.</li>
+          <li>Replace files if asked.</li>
+        </ol>
+        <p class="warn">Copy the files inside <code>plugins</code>, not the whole FiveM.app folder.</p>
+      </div>
+    </article>
+
+    <article class="step reverse" id="gtav">
+      <div class="copy">
+        <span class="badge">STEP 6</span>
+        <h3>Drop ENB files into GTA V</h3>
+        <ol>
+          <li>Open your GTA V install folder. Common path:</li>
+        </ol>
+        <div class="path-row">
+          <code id="gta-path">C:\Program Files\Rockstar Games\Grand Theft Auto V</code>
+          <button class="copy-btn" type="button" data-copy="gta-path">Copy path</button>
+        </div>
+        <ol start="2">
+          <li>Open the pack folder named <code>GTA 5</code>.</li>
+          <li>Select everything in there: <code>enbseries</code>, <code>d3d11.dll</code>, <code>enbseries.ini</code>, and the .fx files.</li>
+          <li>Drop those files next to <code>GTA5.exe</code>.</li>
+          <li>Replace files if asked.</li>
+        </ol>
+        <p class="warn">These ENB files go in the real GTA V game folder. They do not go in FiveM AppData.</p>
+      </div>
+      <img src="images/step-drop-enb.png" alt="Dropping ENB files into the GTA V folder" />
+    </article>
+
+    <section class="tips">
+      <article class="card">
+        <h3>After install</h3>
+        <ul>
+          <li>Start FiveM and join a server.</li>
+          <li>Press <strong>Home</strong> to open ReShade.</li>
+          <li>Load the Glow / Colorwave preset if it does not auto-load.</li>
+          <li>In single player, ENB is usually <strong>Shift + Enter</strong> or <strong>End</strong>.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>If it looks wrong</h3>
+        <ul>
+          <li>Make sure mods went to FiveM <code>mods</code>, not GTA V.</li>
+          <li>Make sure ENB went next to <code>GTA5.exe</code>, not into FiveM.</li>
+          <li>Do not mix the two <code>d3d11.dll</code> files. One is for FiveM plugins, one is for GTA V ENB.</li>
+          <li>Some FiveM servers block graphics mods.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/config.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

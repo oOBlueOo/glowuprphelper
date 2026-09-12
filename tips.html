@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FiveM and PC Tips</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="tips">
+  <nav class="nav" id="site-nav"></nav>
+  <header class="hero compact">
+    <img class="bg" src="images/hero-glow-city.png" alt="" />
+    <div class="hero-inner">
+      <h1>FiveM and PC tips</h1>
+      <p class="lede">Quick fixes that stop most shader, crash, and FPS problems before you reinstall everything.</p>
+    </div>
+  </header>
+  <main>
+    <section class="grid-2">
+      <article class="card">
+        <h3>Before you install anything</h3>
+        <ul>
+          <li>Close FiveM and GTA V completely.</li>
+          <li>Have at least 20 GB free on the drive that holds FiveM and GTA V.</li>
+          <li>Install GTA V through Steam, Epic, or Rockstar. FiveM needs a real copy.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Do not mix these files</h3>
+        <ul>
+          <li>FiveM <code>plugins\d3d11.dll</code> stays in FiveM.</li>
+          <li>ENB <code>d3d11.dll</code> stays next to <code>GTA5.exe</code>.</li>
+          <li>Mods (.rpf) go in FiveM <code>mods</code>, never into the GTA V folder.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>ReShade and ENB keys</h3>
+        <ul>
+          <li>FiveM ReShade: <strong>Home</strong></li>
+          <li>ENB overlay in single player: <strong>Shift + Enter</strong> or <strong>End</strong></li>
+          <li>If Home does nothing, another overlay stole the key. Turn Discord overlay off and try again.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Crashes after shaders</h3>
+        <ul>
+          <li><a href="drivers.html">Update GPU drivers</a>, then reboot.</li>
+          <li><a href="cache.html">Clear FiveM cache</a>.</li>
+          <li>Turn off Discord overlay, NVIDIA overlay, and Xbox Game Bar.</li>
+          <li>Some servers block graphics mods. That is a server rule, not a broken pack.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>More FPS</h3>
+        <ul>
+          <li>Windows power plan: High performance or Ultimate performance.</li>
+          <li>Play on an SSD, not a spinning hard drive.</li>
+          <li>In NVIDIA / AMD, set FiveM to High performance / Gaming.</li>
+          <li>Close Chrome tabs, recording software, and RGB apps while you play.</li>
+          <li>ReShade depth and heavy effects cost FPS. Turn down what you do not need.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Windows settings that help</h3>
+        <ul>
+          <li>Game Mode on. Xbox Game Bar off if it causes crashes.</li>
+          <li>Hardware-accelerated GPU scheduling: try On, reboot, test. If it is worse, turn it Off.</li>
+          <li>Fullscreen optimizations: right-click FiveM.exe → Properties → Compatibility → disable fullscreen optimizations if alt-tab is messy.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>GTA V / Rockstar</h3>
+        <ul>
+          <li>Open the Rockstar launcher once so it is logged in before FiveM.</li>
+          <li>If FiveM says the game files are invalid, verify GTA V in Steam / Epic / Rockstar.</li>
+          <li>Do not put ENB files inside FiveM. They will not load there.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Still stuck?</h3>
+        <ul>
+          <li>Re-read the <a href="install.html">install guide</a> and check the two destinations.</li>
+          <li>Ask in GLOW UP RP Discord. Say what you installed and what you see on screen.</li>
+          <li>A screenshot of <code>FiveM.app\plugins</code> and your GTA V folder helps staff help you faster.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/config.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

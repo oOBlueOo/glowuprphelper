@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: glow-shaders
+    runtime: node
+    plan: free
+    buildCommand: "echo ready"
+    startCommand: node server.mjs
+    envVars:
+      - key: DISCORD_CLIENT_ID
+        sync: false
+      - key: DISCORD_CLIENT_SECRET
+        sync: false
+      - key: DISCORD_GUILD_ID
+        value: "870567426306211840"
+      - key: DISCORD_INVITE_URL
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true

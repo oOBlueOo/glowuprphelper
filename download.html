@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Download Glow Shaders</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="download">
+  <nav class="nav" id="site-nav"></nav>
+  <header class="hero compact">
+    <img class="bg" src="images/hero-glow-city.png" alt="" />
+    <div class="hero-inner">
+      <h1>Download Glow Shaders</h1>
+      <p class="lede">The pack is free for GLOW UP RP Discord members. Sign in with Discord so we can check you are in the server.</p>
+    </div>
+  </header>
+  <main>
+    <section class="card gate">
+      <p id="status-line">Checking Discord…</p>
+
+      <div id="panel-login" class="hidden">
+        <p>Join the Discord first if you are not already in it, then sign in.</p>
+        <div class="actions" style="margin-top:18px;">
+          <a id="join-btn" class="btn btn-discord" href="https://discord.com/channels/870567426306211840" target="_blank" rel="noreferrer">Open GLOW UP RP Discord</a>
+          <a class="btn btn-primary" href="/api/login">Sign in with Discord</a>
+        </div>
+      </div>
+
+      <div id="panel-join" class="hidden">
+        <div class="user-row">
+          <img id="join-avatar" class="avatar" alt="" />
+          <div>
+            <strong id="join-name"></strong>
+            <p style="margin:0;">Signed in, but not in GLOW UP RP yet.</p>
+          </div>
+        </div>
+        <div class="actions">
+          <a id="join-btn-2" class="btn btn-discord" href="https://discord.com/channels/870567426306211840" target="_blank" rel="noreferrer">Join GLOW UP RP</a>
+          <a class="btn btn-primary" href="/api/login">I joined — check again</a>
+        </div>
+      </div>
+
+      <div id="panel-ready" class="hidden">
+        <div class="user-row">
+          <img id="ready-avatar" class="avatar" alt="" />
+          <div>
+            <strong id="ready-name"></strong>
+            <p class="ok" style="margin:8px 0 0;">You are in GLOW UP RP. The pack is unlocked.</p>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="/api/download">Download Glow_shaders.rar (189 MB)</a>
+          <a class="btn" href="install.html">Open install guide</a>
+          <a class="btn" href="/api/logout">Sign out</a>
+        </div>
+      </div>
+
+      <div id="panel-setup" class="hidden">
+        <p class="warn">The download lock is not connected yet. The site owner needs a Discord app so the site can check server membership.</p>
+        <ol style="text-align:left;color:var(--muted);">
+          <li>Open <a href="https://discord.com/developers/applications" target="_blank" rel="noreferrer">Discord Developer Portal</a> and create an application.</li>
+          <li>OAuth2 → add redirect <code id="redirect-uri"></code></li>
+          <li>Copy the Client ID and Client Secret into a <code>.env</code> file on the host.</li>
+          <li>Set <code>DISCORD_GUILD_ID=870567426306211840</code> and your Discord invite URL.</li>
+          <li>Restart the site, then this page will show Sign in with Discord.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/config.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/download.js"></script>
+</body>
+</html>
