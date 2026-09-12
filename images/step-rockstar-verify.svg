@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#101010"/>
+  <rect width="280" height="900" fill="#161616"/>
+  <text x="32" y="56" fill="#f4c25b" font-family="Segoe UI, Arial" font-size="22" font-weight="800" letter-spacing="4">ROCKSTAR</text>
+  <rect x="20" y="92" width="240" height="52" rx="6" fill="#2a2416" stroke="#5b4a22"/>
+  <text x="36" y="125" fill="#f4c25b" font-family="Segoe UI, Arial" font-size="18">Grand Theft Auto V</text>
+  <text x="36" y="186" fill="#bdbdbd" font-family="Segoe UI, Arial" font-size="18">Red Dead Redemption 2</text>
+  <text x="332" y="120" fill="#f4c25b" font-family="Segoe UI, Arial" font-size="16" font-weight="800" letter-spacing="4">ROCKSTAR GAMES LAUNCHER</text>
+  <text x="332" y="186" fill="#ffffff" font-family="Segoe UI, Arial" font-size="48" font-weight="800">Grand Theft Auto V</text>
+  <text x="332" y="236" fill="#b7b7b7" font-family="Segoe UI, Arial" font-size="22">Use Verify game files if FiveM says the install is invalid.</text>
+  <rect x="332" y="280" width="760" height="210" rx="10" fill="#1c1c1c" stroke="#333333"/>
+  <text x="360" y="330" fill="#cfcfcf" font-family="Segoe UI, Arial" font-size="20">Status</text>
+  <text x="900" y="330" fill="#cfcfcf" font-family="Segoe UI, Arial" font-size="20">Installed</text>
+  <text x="360" y="380" fill="#cfcfcf" font-family="Segoe UI, Arial" font-size="20">Version</text>
+  <text x="900" y="380" fill="#cfcfcf" font-family="Segoe UI, Arial" font-size="20">Latest</text>
+  <text x="360" y="430" fill="#cfcfcf" font-family="Segoe UI, Arial" font-size="20">Location</text>
+  <text x="620" y="430" fill="#cfcfcf" font-family="Segoe UI, Arial" font-size="18">C:\Program Files\Rockstar Games\Grand Theft Auto V</text>
+  <rect x="332" y="520" width="240" height="52" rx="4" fill="#f4c25b"/>
+  <text x="360" y="554" fill="#1a1408" font-family="Segoe UI, Arial" font-size="20" font-weight="800">Verify game files</text>
+  <rect x="592" y="520" width="150" height="52" rx="4" fill="none" stroke="#f4c25b" stroke-width="2"/>
+  <text x="630" y="554" fill="#f4c25b" font-family="Segoe UI, Arial" font-size="20" font-weight="800">Update</text>
+</svg>

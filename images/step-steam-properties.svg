@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#0e141b"/>
+  <rect width="240" height="900" fill="#171d25"/>
+  <rect x="240" width="1" height="900" fill="#2a323c"/>
+  <text x="36" y="56" fill="#66c0f4" font-family="Segoe UI, Arial" font-size="26" font-weight="800" letter-spacing="3">STEAM</text>
+  <text x="36" y="110" fill="#8f98a0" font-family="Segoe UI, Arial" font-size="20">Store</text>
+  <rect x="24" y="128" width="192" height="40" rx="4" fill="#1b2838"/>
+  <text x="36" y="155" fill="#ffffff" font-family="Segoe UI, Arial" font-size="20">Library</text>
+  <text x="36" y="200" fill="#8f98a0" font-family="Segoe UI, Arial" font-size="20">Community</text>
+  <text x="292" y="78" fill="#ffffff" font-family="Segoe UI, Arial" font-size="34" font-weight="800">Library</text>
+  <text x="304" y="150" fill="#c7d5e0" font-family="Segoe UI, Arial" font-size="22">Counter-Strike 2</text>
+  <rect x="280" y="170" width="420" height="48" rx="4" fill="#66c0f4"/>
+  <text x="304" y="202" fill="#10202d" font-family="Segoe UI, Arial" font-size="22" font-weight="700">Grand Theft Auto V</text>
+  <text x="304" y="250" fill="#c7d5e0" font-family="Segoe UI, Arial" font-size="22">Red Dead Redemption 2</text>
+  <rect x="560" y="196" width="280" height="188" fill="#2a3f54" stroke="#4c6a82"/>
+  <text x="584" y="236" fill="#dbe2ea" font-family="Segoe UI, Arial" font-size="20">Play</text>
+  <text x="584" y="276" fill="#dbe2ea" font-family="Segoe UI, Arial" font-size="20">Manage</text>
+  <text x="584" y="316" fill="#dbe2ea" font-family="Segoe UI, Arial" font-size="20">Browse local files</text>
+  <rect x="560" y="332" width="280" height="44" fill="#67c1f5"/>
+  <text x="584" y="361" fill="#10202d" font-family="Segoe UI, Arial" font-size="20" font-weight="700">Properties</text>
+</svg>

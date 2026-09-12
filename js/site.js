@@ -14,7 +14,7 @@
     { href: "verify.html", id: "verify", label: "Verify" },
     { href: "tips.html", id: "tips", label: "Tips" },
     { href: discord, id: "discord", label: "Join Discord", external: true, accent: true },
-    { href: fivem, id: "play", label: "Join FiveM", external: true },
+    { href: fivem, id: "play", label: "Join FiveM", external: true, play: true },
     { href: store, id: "store", label: "Store", external: true, store: true }
   ];
 
@@ -23,7 +23,7 @@
       '<a class="brand" href="index.html"><img src="images/logo-glowup-small.png" alt="GlowUp RP" />GlowUpRP Helper</a>' +
       '<div class="nav-links">' +
       links.map(function (item) {
-        var cls = (item.id === page ? "active " : "") + (item.accent ? "accent" : "") + (item.store ? " store" : "");
+        var cls = (item.id === page ? "active " : "") + (item.accent ? "accent" : "") + (item.store ? " store" : "") + (item.play ? " play" : "");
         var extra = item.external ? ' target="_blank" rel="noreferrer"' : "";
         return '<a class="' + cls + '" href="' + item.href + '"' + extra + ">" + item.label + "</a>";
       }).join("") +

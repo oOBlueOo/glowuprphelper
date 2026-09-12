@@ -154,6 +154,11 @@ p { color: var(--muted); line-height: 1.6; }
   color: #1a1408;
   border-color: transparent;
 }
+.nav-links a.play {
+  background: var(--cyan);
+  color: #071018;
+  border-color: transparent;
+}
 .btn-do {
   background: linear-gradient(90deg, var(--pink), var(--cyan));
   color: #140814;
@@ -211,6 +216,11 @@ main { width: min(1100px, calc(100% - 32px)); margin: 0 auto; padding: 36px 0 80
   min-height: 280px;
   object-fit: cover;
   display: block;
+}
+.step img[src$=".svg"] {
+  object-fit: contain;
+  background: #10141c;
+  padding: 8px;
 }
 .copy { padding: 26px; }
 .copy h3 { margin: 0 0 10px; font-size: 26px; color: var(--text); }

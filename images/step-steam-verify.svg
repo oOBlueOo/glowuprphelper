@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#1b2838"/>
+  <rect width="1600" height="64" fill="#171a21"/>
+  <rect y="64" width="240" height="836" fill="#171d25"/>
+  <text x="28" y="42" fill="#ffffff" font-family="Segoe UI, Arial" font-size="22" font-weight="700">Properties  Grand Theft Auto V</text>
+  <text x="1548" y="42" fill="#8f98a0" font-family="Segoe UI, Arial" font-size="22"></text>
+  <text x="40" y="120" fill="#8f98a0" font-family="Segoe UI, Arial" font-size="20">General</text>
+  <rect x="20" y="136" width="200" height="42" rx="4" fill="#2a3f54"/>
+  <text x="40" y="164" fill="#ffffff" font-family="Segoe UI, Arial" font-size="20">Installed Files</text>
+  <text x="40" y="214" fill="#8f98a0" font-family="Segoe UI, Arial" font-size="20">DLC</text>
+  <text x="40" y="256" fill="#8f98a0" font-family="Segoe UI, Arial" font-size="20">Updates</text>
+  <text x="40" y="298" fill="#8f98a0" font-family="Segoe UI, Arial" font-size="20">Controller</text>
+  <text x="300" y="150" fill="#ffffff" font-family="Segoe UI, Arial" font-size="40" font-weight="800">Installed Files</text>
+  <text x="300" y="200" fill="#8f98a0" font-family="Segoe UI, Arial" font-size="22">Steam can check Grand Theft Auto V and replace missing or broken files.</text>
+  <rect x="300" y="236" width="360" height="54" rx="3" fill="#67c1f5"/>
+  <text x="326" y="271" fill="#10202d" font-family="Segoe UI, Arial" font-size="20" font-weight="800">Verify integrity of game files</text>
+  <text x="300" y="340" fill="#c7d5e0" font-family="Segoe UI, Arial" font-size="20">Size on disk: 110.64 GB</text>
+  <text x="300" y="376" fill="#c7d5e0" font-family="Segoe UI, Arial" font-size="20">Installed on Local Disk (C:)</text>
+</svg>

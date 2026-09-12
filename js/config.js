@@ -7,5 +7,5 @@ window.GLOW = {
   packName: "Glow_shaders.rar",
   packSize: "189 MB",
   packHref: "downloads/Glow_shaders.rar",
-  packReleaseHref: "https://github.com/oOBlueOo/glow-shaders/releases/latest/download/Glow_shaders.rar"
+  packReleaseHref: "https://github.com/oOBlueOo/glowuprphelper/releases/latest/download/Glow_shaders.rar"
 };
