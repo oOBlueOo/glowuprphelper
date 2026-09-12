@@ -2,12 +2,6 @@ import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { onRequestGet as login } from "./functions/api/login.js";
-import { onRequestGet as callback } from "./functions/api/callback.js";
-import { onRequestGet as me } from "./functions/api/me.js";
-import { onRequestGet as logout } from "./functions/api/logout.js";
-import { readCookie, verifySession } from "./functions/_lib/session.js";
-import { isConfigured } from "./functions/_lib/discord.js";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 loadEnv(path.join(root, ".env"));
@@ -16,13 +10,6 @@ const env = process.env;
 const port = Number(env.PORT || 8787);
 const packFile = path.join(root, "downloads", "Glow_shaders.rar");
 
-const routes = {
-  "/api/login": login,
-  "/api/callback": callback,
-  "/api/me": me,
-  "/api/logout": logout
-};
-
 const types = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
@@ -30,7 +17,8 @@ const types = {
   ".png": "image/png",
   ".svg": "image/svg+xml",
   ".ico": "image/x-icon",
-  ".json": "application/json"
+  ".json": "application/json",
+  ".bat": "application/octet-stream"
 };
 
 function loadEnv(file) {
@@ -46,45 +34,7 @@ function loadEnv(file) {
   }
 }
 
-function toRequest(req) {
-  const host = req.headers.host || `127.0.0.1:${port}`;
-  const proto = req.headers["x-forwarded-proto"] || "http";
-  const headers = new Headers();
-  for (const [key, value] of Object.entries(req.headers)) {
-    if (!value) continue;
-    headers.set(key, Array.isArray(value) ? value.join(", ") : value);
-  }
-  return new Request(`${proto}://${host}${req.url}`, { method: req.method, headers });
-}
-
-async function sendWeb(res, response) {
-  res.statusCode = response.status;
-  const cookies = [];
-  response.headers.forEach((value, key) => {
-    if (key.toLowerCase() === "set-cookie") cookies.push(value);
-    else res.setHeader(key, value);
-  });
-  if (cookies.length) res.setHeader("Set-Cookie", cookies);
-  if (!response.body) {
-    res.end();
-    return;
-  }
-  res.end(Buffer.from(await response.arrayBuffer()));
-}
-
-async function sendPack(req, res) {
-  const request = toRequest(req);
-  if (!isConfigured(env)) {
-    res.writeHead(302, { Location: "/download.html" });
-    res.end();
-    return;
-  }
-  const session = await verifySession(readCookie(request, "glow_session"), env.SESSION_SECRET);
-  if (!session || session.kind !== "user" || !session.member) {
-    res.writeHead(302, { Location: "/download.html?error=join" });
-    res.end();
-    return;
-  }
+function sendPack(res) {
   if (env.DOWNLOAD_FILE_URL) {
     res.writeHead(302, { Location: env.DOWNLOAD_FILE_URL });
     res.end();
@@ -108,23 +58,19 @@ async function sendPack(req, res) {
 function safeFile(urlPath) {
   const clean = decodeURIComponent(urlPath.split("?")[0]);
   if (clean.includes("\0") || clean.includes("..")) return null;
-  if (clean.startsWith("/downloads") || clean.startsWith("/functions") || clean.startsWith("/.")) return null;
-  let rel = clean === "/" ? "/index.html" : clean;
+  if (clean.startsWith("/functions") || clean.startsWith("/.")) return null;
+  if (clean.startsWith("/downloads") && clean !== "/downloads/Glow_shaders.rar") return null;
+  const rel = clean === "/" ? "/index.html" : clean;
   const file = path.normalize(path.join(root, rel));
   if (!file.startsWith(root)) return null;
   return file;
 }
 
-const server = http.createServer(async (req, res) => {
+const server = http.createServer((req, res) => {
   try {
     const url = new URL(req.url, `http://127.0.0.1:${port}`);
-    if (url.pathname === "/api/download") {
-      await sendPack(req, res);
-      return;
-    }
-    const api = routes[url.pathname];
-    if (api) {
-      await sendWeb(res, await api({ request: toRequest(req), env }));
+    if (url.pathname === "/api/download" || url.pathname === "/downloads/Glow_shaders.rar") {
+      sendPack(res);
       return;
     }
     const file = safeFile(url.pathname);
@@ -144,5 +90,5 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.listen(port, "0.0.0.0", () => {
-  console.log(`Glow site ready: http://127.0.0.1:${port}`);
+  console.log(`GlowUpRP Helper ready: http://127.0.0.1:${port}`);
 });

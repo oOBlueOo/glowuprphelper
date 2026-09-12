@@ -1,63 +1,41 @@
 (function () {
+  var key = "glow_joined_discord";
+  var invite = (window.GLOW && window.GLOW.inviteUrl) || "https://discord.gg/glowuprp";
+  var fivem = (window.GLOW && window.GLOW.fivemUrl) || "https://cfx.re/join/p3b9x7";
+  var pack = (window.GLOW && window.GLOW.packHref) || "downloads/Glow_shaders.rar";
+  if (location.hostname.indexOf("github.io") !== -1 && window.GLOW && window.GLOW.packReleaseHref) {
+    pack = window.GLOW.packReleaseHref;
+  }
+  var joinBtn = document.getElementById("join-discord");
+  var playBtn = document.getElementById("join-fivem");
+  var locked = document.getElementById("panel-locked");
+  var ready = document.getElementById("panel-ready");
   var status = document.getElementById("status-line");
-  var panels = {
-    login: document.getElementById("panel-login"),
-    join: document.getElementById("panel-join"),
-    ready: document.getElementById("panel-ready"),
-    setup: document.getElementById("panel-setup")
-  };
-  var redirect = document.getElementById("redirect-uri");
-  if (redirect) redirect.textContent = window.location.origin + "/api/callback";
+  var packLink = document.getElementById("pack-download");
 
-  function show(name, message) {
-    Object.keys(panels).forEach(function (key) {
-      panels[key].classList.toggle("hidden", key !== name);
-    });
-    if (message) status.textContent = message;
+  if (joinBtn) joinBtn.href = invite;
+  if (playBtn) playBtn.href = fivem;
+  if (packLink) packLink.href = pack;
+
+  function showUnlocked() {
+    if (locked) locked.classList.add("hidden");
+    if (ready) ready.classList.remove("hidden");
+    if (status) status.textContent = "Pack unlocked. Download Glow_shaders.rar below.";
   }
 
-  function setInvite(url) {
-    var invite = url || (window.GLOW && window.GLOW.inviteUrl) || "https://discord.com/channels/870567426306211840";
-    ["join-btn", "join-btn-2"].forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) el.href = invite;
-    });
+  function showLocked() {
+    if (locked) locked.classList.remove("hidden");
+    if (ready) ready.classList.add("hidden");
+    if (status) status.textContent = "Click Join Discord first. The pack unlocks after that.";
   }
 
-  function avatarUrl(user) {
-    if (user.avatar) {
-      return "https://cdn.discordapp.com/avatars/" + user.id + "/" + user.avatar + ".png";
-    }
-    return "images/logo-glowup-small.png";
-  }
+  if (localStorage.getItem(key) === "1") showUnlocked();
+  else showLocked();
 
-  var params = new URLSearchParams(window.location.search);
-  if (params.get("error") === "denied") status.textContent = "Discord login was cancelled.";
-  if (params.get("error") === "join") status.textContent = "Join GLOW UP RP, then check again.";
-
-  fetch("/api/me", { credentials: "same-origin" })
-    .then(function (res) { return res.json(); })
-    .then(function (data) {
-      setInvite(data.inviteUrl);
-      if (!data.configured) {
-        show("setup", "Download lock needs a Discord app.");
-        return;
-      }
-      if (!data.loggedIn) {
-        show("login", "Members of GLOW UP RP can download the pack.");
-        return;
-      }
-      if (!data.member) {
-        document.getElementById("join-name").textContent = data.username || "Discord user";
-        document.getElementById("join-avatar").src = avatarUrl(data);
-        show("join", "You are signed in, but not in the Discord yet.");
-        return;
-      }
-      document.getElementById("ready-name").textContent = data.username || "Member";
-      document.getElementById("ready-avatar").src = avatarUrl(data);
-      show("ready", "Pack unlocked.");
-    })
-    .catch(function () {
-      show("setup", "Could not reach the download server.");
+  if (joinBtn) {
+    joinBtn.addEventListener("click", function () {
+      localStorage.setItem(key, "1");
+      showUnlocked();
     });
+  }
 })();

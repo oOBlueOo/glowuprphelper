@@ -1,18 +1,12 @@
 services:
   - type: web
-    name: glow-shaders
+    name: glowuprphelper
     runtime: node
     plan: free
     buildCommand: "echo ready"
     startCommand: node server.mjs
     envVars:
-      - key: DISCORD_CLIENT_ID
+      - key: PORT
+        value: "8787"
+      - key: DOWNLOAD_FILE_URL
         sync: false
-      - key: DISCORD_CLIENT_SECRET
-        sync: false
-      - key: DISCORD_GUILD_ID
-        value: "870567426306211840"
-      - key: DISCORD_INVITE_URL
-        sync: false
-      - key: SESSION_SECRET
-        generateValue: true

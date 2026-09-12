@@ -149,6 +149,19 @@ p { color: var(--muted); line-height: 1.6; }
   border: 0;
 }
 .btn-discord { background: #5865f2; border-color: #5865f2; color: #fff; }
+.btn-store, .nav-links a.store {
+  background: linear-gradient(90deg, #f3d27a, #ffb347);
+  color: #1a1408;
+  border-color: transparent;
+}
+.btn-do {
+  background: linear-gradient(90deg, var(--pink), var(--cyan));
+  color: #140814;
+  border: 0;
+  font-size: 16px;
+  padding: 12px 18px;
+}
+.helper-note { margin-top: 10px; font-size: 13px; }
 
 main { width: min(1100px, calc(100% - 32px)); margin: 0 auto; padding: 36px 0 80px; }
 

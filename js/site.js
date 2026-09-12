@@ -2,28 +2,36 @@
   var page = document.body.getAttribute("data-page") || "";
   var nav = document.getElementById("site-nav");
   var footer = document.getElementById("site-footer");
+  var discord = (window.GLOW && window.GLOW.inviteUrl) || "https://discord.gg/glowuprp";
+  var fivem = (window.GLOW && window.GLOW.fivemUrl) || "https://cfx.re/join/p3b9x7";
+  var store = (window.GLOW && window.GLOW.storeUrl) || "https://andrp.tebex.io/";
   var links = [
     { href: "index.html", id: "home", label: "Home" },
-    { href: "download.html", id: "download", label: "Download", accent: true },
+    { href: "download.html", id: "download", label: "Download" },
     { href: "install.html", id: "install", label: "Install" },
-    { href: "cache.html", id: "cache", label: "Clear Cache" },
+    { href: "cache.html", id: "cache", label: "Cache" },
     { href: "drivers.html", id: "drivers", label: "Drivers" },
-    { href: "tips.html", id: "tips", label: "Tips" }
+    { href: "verify.html", id: "verify", label: "Verify" },
+    { href: "tips.html", id: "tips", label: "Tips" },
+    { href: discord, id: "discord", label: "Join Discord", external: true, accent: true },
+    { href: fivem, id: "play", label: "Join FiveM", external: true },
+    { href: store, id: "store", label: "Store", external: true, store: true }
   ];
 
   if (nav) {
     nav.innerHTML =
-      '<a class="brand" href="index.html"><img src="images/logo-glowup-small.png" alt="GlowUp RP" />Glow Shaders</a>' +
+      '<a class="brand" href="index.html"><img src="images/logo-glowup-small.png" alt="GlowUp RP" />GlowUpRP Helper</a>' +
       '<div class="nav-links">' +
       links.map(function (item) {
-        var cls = (item.id === page ? "active " : "") + (item.accent ? "accent" : "");
-        return '<a class="' + cls + '" href="' + item.href + '">' + item.label + "</a>";
+        var cls = (item.id === page ? "active " : "") + (item.accent ? "accent" : "") + (item.store ? " store" : "");
+        var extra = item.external ? ' target="_blank" rel="noreferrer"' : "";
+        return '<a class="' + cls + '" href="' + item.href + '"' + extra + ">" + item.label + "</a>";
       }).join("") +
       "</div>";
   }
 
   if (footer) {
-    footer.innerHTML = "Glow Shaders · GLOW UP RP members only for the pack · plugins + mods → FiveM · ENB → GTA V";
+    footer.innerHTML = 'glowuprphelper · <a href="' + discord + '" target="_blank" rel="noreferrer">Join Discord</a> · <a href="' + fivem + '" target="_blank" rel="noreferrer">Join FiveM</a> · <a href="' + store + '" target="_blank" rel="noreferrer">Store</a>';
   }
 
   document.querySelectorAll(".copy-btn").forEach(function (btn) {
