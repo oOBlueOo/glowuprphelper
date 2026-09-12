@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Clear FiveM Cache</title>
+  <title>Clear Cache — GlowUpRP Helper</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body data-page="cache">
@@ -13,9 +13,14 @@
     <div class="hero-inner">
       <h1>Clear your FiveM cache</h1>
       <p class="lede">Do this after installing shaders, if textures look old, or if a server will not finish loading.</p>
+      <div class="pills">
+        <a class="pill btn-do" href="helpers/clear-fivem-cache.bat" download>Clear cache for me</a>
+        <a class="pill" href="helpers/open-cache-folder.vbs">Open cache folder</a>
+      </div>
     </div>
   </header>
   <main>
+    <p class="warn">Open cache folder opens File Explorer on <code>FiveM.app\data</code>. The clear-cache helper closes FiveM, then deletes only <code>cache</code>, <code>server-cache</code>, and <code>server-cache-priv</code>. It does not touch <code>game-storage</code>, GTA V, or your shader files. Windows may show SmartScreen — Run anyway is fine.</p>
     <section class="tips">
       <article class="card">
         <h3>Delete these</h3>
@@ -48,6 +53,7 @@
         <div class="path-row">
           <code id="cache-path">%localappdata%\FiveM\FiveM.app\data</code>
           <button class="copy-btn" type="button" data-copy="cache-path">Copy path</button>
+          <a class="btn btn-do" href="helpers/open-cache-folder.vbs">Open this folder for me</a>
         </div>
       </div>
     </article>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verify / Update — GlowUpRP Helper</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="verify">
+  <nav class="nav" id="site-nav"></nav>
+  <header class="hero compact">
+    <img class="bg" src="images/hero-glow-city.png" alt="" />
+    <div class="hero-inner">
+      <h1>Verify and update GTA V</h1>
+      <p class="lede">Broken or old game files make FiveM and shaders crash. Use Steam or Rockstar to repair and update.</p>
+      <div class="pills">
+        <a class="pill btn-do" href="steam://validate/271590">Verify on Steam for me</a>
+        <a class="pill" href="helpers/open-rockstar.vbs">Open Rockstar Launcher</a>
+        <a class="pill" href="helpers/open-gtav-folder.vbs">Open GTA5.exe folder</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <p class="warn helper-note">Windows may show SmartScreen on the helper. The Steam helper only asks Steam to validate Grand Theft Auto V (app 271590). The Rockstar helper only opens the official launcher.</p>
+
+    <article class="step">
+      <img src="images/step-steam-properties.png" alt="Steam library right-click Properties on GTA V" />
+      <div class="copy">
+        <span class="badge">STEAM</span>
+        <h3>Open GTA V properties</h3>
+        <ol>
+          <li>Open Steam.</li>
+          <li>Go to Library.</li>
+          <li>Right-click <strong>Grand Theft Auto V</strong>.</li>
+          <li>Click <strong>Properties</strong>.</li>
+        </ol>
+        <div class="actions" style="justify-content:flex-start;margin-top:16px;">
+          <a class="btn btn-do" href="steam://nav/games/details/271590">Open GTA V in Steam</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="step reverse">
+      <div class="copy">
+        <span class="badge">STEAM</span>
+        <h3>Verify integrity of game files</h3>
+        <ol>
+          <li>In Properties, open <strong>Installed Files</strong>.</li>
+          <li>Click <strong>Verify integrity of game files</strong>.</li>
+          <li>Wait until Steam finishes. It may re-download missing files.</li>
+        </ol>
+        <div class="actions" style="justify-content:flex-start;margin-top:16px;">
+          <a class="btn btn-do" href="steam://validate/271590">Do it for me — Steam verify</a>
+        </div>
+      </div>
+      <img src="images/step-steam-verify.png" alt="Steam Installed Files with Verify integrity button" />
+    </article>
+
+    <article class="step">
+      <img src="images/step-steam-update.png" alt="Steam GTA V page with Update button" />
+      <div class="copy">
+        <span class="badge">STEAM</span>
+        <h3>Update GTA V on Steam</h3>
+        <ol>
+          <li>Open your Library and select Grand Theft Auto V.</li>
+          <li>If you see <strong>Update</strong>, click it and wait.</li>
+          <li>Steam also updates the game when you verify files or click Play.</li>
+        </ol>
+        <div class="actions" style="justify-content:flex-start;margin-top:16px;">
+          <a class="btn btn-do" href="steam://nav/games/details/271590">Open Steam library page</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="step reverse">
+      <div class="copy">
+        <span class="badge">ROCKSTAR</span>
+        <h3>Verify and update in Rockstar Launcher</h3>
+        <ol>
+          <li>Open Rockstar Games Launcher and sign in.</li>
+          <li>Select <strong>Grand Theft Auto V</strong>.</li>
+          <li>Open the game settings / extra options.</li>
+          <li>Click <strong>Verify game files</strong> or <strong>Repair</strong>.</li>
+          <li>If an update is available, click <strong>Update</strong> first.</li>
+        </ol>
+        <div class="actions" style="justify-content:flex-start;margin-top:16px;">
+          <a class="btn btn-do" href="helpers/open-rockstar.vbs">Open Rockstar for me</a>
+          <a class="btn" href="helpers/open-gtav-folder.vbs">Show GTA5.exe</a>
+        </div>
+        <p class="warn">Rockstar does not offer a one-click verify link like Steam. The helper opens the launcher. You still click Verify / Update there.</p>
+      </div>
+      <img src="images/step-rockstar-verify.png" alt="Rockstar Games Launcher verify game files" />
+    </article>
+
+    <section class="tips">
+      <article class="card">
+        <h3>After a verify</h3>
+        <ul>
+          <li>If you use ENB, put those files back next to <code>GTA5.exe</code> if Steam replaced them.</li>
+          <li>Then <a href="cache.html">clear FiveM cache</a>.</li>
+          <li>Join GLOW UP RP: <a href="https://cfx.re/join/p3b9x7" target="_blank" rel="noreferrer">cfx.re/join/p3b9x7</a></li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Which store do you have?</h3>
+        <ul>
+          <li>Steam copy: use the Steam buttons above.</li>
+          <li>Rockstar / Epic copies still use the Rockstar launcher for many repairs.</li>
+          <li>FiveM needs a real licensed GTA V install.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/config.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

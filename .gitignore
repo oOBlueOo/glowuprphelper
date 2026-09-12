@@ -4,3 +4,5 @@ node_modules
 .vercel
 downloads/*.rar
 *.log
+_mockups
+helpers/asw-*

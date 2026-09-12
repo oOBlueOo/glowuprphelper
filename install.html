@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Install Glow Shaders</title>
+  <title>Install — GlowUpRP Helper</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body data-page="install">
@@ -66,7 +66,9 @@
         <div class="path-row">
           <code id="fivem-path">%localappdata%\FiveM\FiveM.app</code>
           <button class="copy-btn" type="button" data-copy="fivem-path">Copy path</button>
+          <a class="btn btn-do" href="helpers/open-fivem-folder.vbs">Open FiveM folder for me</a>
         </div>
+        <p class="warn helper-note">Click the button, then Run the helper. File Explorer opens on your real <code>FiveM.app</code> folder — not a Run box.</p>
       </div>
       <img src="images/step-win-run.png" alt="Windows Run box opening FiveM AppData" />
     </article>
@@ -81,6 +83,10 @@
           <li><code>mods</code></li>
           <li><code>plugins</code></li>
         </ul>
+        <div class="actions" style="justify-content:flex-start;margin-top:14px;">
+          <a class="btn btn-do" href="helpers/open-fivem-mods.bat">Open mods folder</a>
+          <a class="btn btn-do" href="helpers/open-fivem-plugins.bat">Open plugins folder</a>
+        </div>
         <p>Those are the only two FiveM folders you need. Do not drop the ENB files here.</p>
       </div>
     </article>
@@ -99,6 +105,7 @@
           <li>Drag them into <code>FiveM.app\mods</code>.</li>
           <li>If Windows asks to replace files, click Replace.</li>
         </ol>
+        <a class="btn btn-do" href="helpers/open-fivem-mods.bat">Open the mods folder for me</a>
       </div>
       <img src="images/step-drop-mods.png" alt="Dragging rpf mods into the FiveM mods folder" />
     </article>
@@ -114,6 +121,7 @@
           <li>Drag all of that into <code>FiveM.app\plugins</code>.</li>
           <li>Replace files if asked.</li>
         </ol>
+        <a class="btn btn-do" href="helpers/open-fivem-plugins.bat">Open the plugins folder for me</a>
         <p class="warn">Copy the files inside <code>plugins</code>, not the whole FiveM.app folder.</p>
       </div>
     </article>
@@ -128,7 +136,9 @@
         <div class="path-row">
           <code id="gta-path">C:\Program Files\Rockstar Games\Grand Theft Auto V</code>
           <button class="copy-btn" type="button" data-copy="gta-path">Copy path</button>
+          <a class="btn btn-do" href="helpers/open-gtav-folder.vbs">Open GTA V folder for me</a>
         </div>
+        <p class="warn helper-note">This finds your real install and opens File Explorer with <code>GTA5.exe</code> selected.</p>
         <ol start="2">
           <li>Open the pack folder named <code>GTA 5</code>.</li>
           <li>Select everything in there: <code>enbseries</code>, <code>d3d11.dll</code>, <code>enbseries.ini</code>, and the .fx files.</li>
